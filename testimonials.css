@@ -1,0 +1,157 @@
+.hero {
+  min-height: 80dvh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.hero-text h1 {
+  font-family: "Permanet Marker", cursive;
+  font-size: 50px;
+  line-height: 1;
+  color: whitesmoke;
+  /* margin: 0 0 40px; */
+}
+
+.hero-text h2 {
+  font-size: 30px;
+  line-height: 1;
+  color: whitesmoke;
+  margin: 0 0 20px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper .outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .card {
+  background: #fff;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  animation: animate 15s linear infinite;
+  animation-delay: calc(3s * var(--delay));
+}
+.outer:hover .card {
+  animation-play-state: paused;
+}
+.wrapper .card:last-child {
+  animation-delay: calc(-3s * var(--delay));
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) scale(0.5);
+  }
+  5%,
+  20% {
+    opacity: 0;
+    transform: translateX(100%) scale(0.7);
+  }
+  25%,
+  40% {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0%) scale(1);
+  }
+  45%,
+  60% {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.7);
+  }
+  65%,
+  100% {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.5);
+  }
+}
+.card .content {
+  display: flex;
+  align-items: center;
+}
+
+.details span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-text p {
+    font-size: 0.9em;
+    margin-bottom: 1.25em;
+  }
+
+  .details p {
+    font-size: 0.9em;
+  }
+}
+
+/* Screen sizes up to 390px */
+@media only screen and (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    padding: 10em 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.25em;
+  }
+
+  .hero-text h4 {
+    font-size: 0.875em;
+  }
+
+  .hero-text p {
+    font-size: 0.75em;
+    margin-bottom: 1.25em;
+  }
+
+  .hero-text a {
+    font-size: 0.625em;
+    padding: 0.438em 0.875em;
+    margin-bottom: 2em;
+  }
+}

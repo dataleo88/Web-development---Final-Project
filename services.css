@@ -1,0 +1,154 @@
+.hero {
+  min-height: 80dvh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.hero-text h1 {
+  font-family: "Permanet Marker", cursive;
+  font-size: 70px;
+  line-height: 1;
+  color: whitesmoke;
+  margin: 0 0 40px;
+}
+
+.hero-text h2 {
+  font-size: 30px;
+  line-height: 1;
+  color: whitesmoke;
+  margin: 0 0 20px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th:first-child,
+td:first-child {
+  width: 50%;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #869d96;
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 30, 21, 1);
+}
+
+td {
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 200px;
+  background: whitesmoke;
+  margin-bottom: 40px;
+}
+
+.card > img {
+  width: 200px;
+  height: 200px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.best-sellers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    display: block;
+    padding: 6.25em 10;
+  }
+  .hero-text h1 {
+    font-size: 3em;
+  }
+  .hero-text h4 {
+    font-size: 1em;
+  }
+  .hero-text p {
+    font-size: 0.9em;
+    margin-bottom: 1.25em;
+  }
+  .hero-text a {
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+  }
+  .best-sellers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* Screen sizes up to 390px */
+@media only screen and (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    padding: 10em 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.25em;
+  }
+
+  .hero-text h4 {
+    font-size: 0.875em;
+  }
+
+  .hero-text p {
+    font-size: 0.75em;
+    margin-bottom: 1.25em;
+  }
+
+  .hero-text a {
+    font-size: 0.625em;
+    padding: 0.438em 0.875em;
+    margin-bottom: 2em;
+  }
+}

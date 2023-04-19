@@ -1,0 +1,170 @@
+.hero {
+  min-height: 80dvh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.hero-text h1 {
+  font-family: "Permanet Marker", cursive;
+  font-size: 70px;
+  line-height: 1;
+  color: whitesmoke;
+  margin: 0 0 40px;
+}
+
+.hero-text h2 {
+  font-size: 30px;
+  line-height: 1;
+  color: whitesmoke;
+  margin: 0 0 20px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+button {
+  display: inline-flex;
+  color: whitesmoke;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  padding: 10px 20px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
+}
+.hero-text a:hover {
+  background: transparent;
+  border: 1px solid cadetblue;
+  margin-left: 20px;
+}
+.hero-text a.ctaa {
+  background: transparent;
+  border: 1px solid whitesmoke;
+  margin-left: 20px;
+}
+.hero-text a.ctaa i {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th:first-child,
+td:first-child {
+  width: 50%;
+}
+
+tbody {
+  background-color: #869d96;
+}
+
+td {
+  color: white;
+}
+
+td > input {
+  text-align: center;
+}
+
+#total {
+  background-color: whitesmoke;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#total {
+  display: inline-flex;
+  color: whitesmoke;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  padding: 10px 20px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    display: block;
+    padding: 6.25em 10;
+  }
+  .hero-text h1 {
+    font-size: 3em;
+  }
+  .hero-text h4 {
+    font-size: 1em;
+  }
+  .hero-text p {
+    font-size: 0.9em;
+    margin-bottom: 1.25em;
+  }
+  .hero-text a {
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+  }
+}
+
+/* Screen sizes up to 390px */
+@media only screen and (max-width: 390px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    padding: 10em 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.25em;
+  }
+
+  .hero-text h4 {
+    font-size: 0.875em;
+  }
+
+  .hero-text p {
+    font-size: 0.75em;
+    margin-bottom: 1.25em;
+  }
+
+  .hero-text a {
+    font-size: 0.625em;
+    padding: 0.438em 0.875em;
+    margin-bottom: 2em;
+  }
+}
